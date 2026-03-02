@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Deep dark blue */
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+.top-container ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.top-container a {
+    text-decoration: none;
+    color: #38bdf8; /* Bright sky blue */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.top-container a:hover {
+    color: #f1f5f9;
+}
+
+
+/* Container for the entire bio section */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Left Side: The Info Card */
+.Bio-container {
+    flex: 1;
+    background: #1e293b;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.Bio-container .my-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #38bdf8;
+    margin-bottom: 20px;
+}
+
+.Bio-container h2 {
+    color: #38bdf8;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Bio-container p {
+    text-align: left;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2); /* Thin blue underline */
+}
+
+.Bio-container p b {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* Right Side: The Description Text */
+.small-description-container {
+    flex: 2;
+    background: rgba(30, 41, 59, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.small-description-container h3 {
+    font-size: 2.2rem;
+    color: #f8fafc;
+    margin-bottom: 20px;
+}
+
+.small-description-container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.small-description-container b, 
+.small-description-container em {
+    color: #38bdf8;
+    font-style: normal;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 850px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Bio-container, .small-description-container {
+        width: 100%;
+    }
+}
